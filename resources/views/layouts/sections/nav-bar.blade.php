@@ -7,10 +7,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="bg-white text-dark navbar-nav mx-auto">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aboutus">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                 <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                 <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">Dropdown</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Option 1</a></li>
@@ -21,6 +22,6 @@
                 <li class="nav-item"><a class="nav-link"  href="#contact">Contact Us</a></li>
             </ul>
         </div>
-        <button style="background:#0c76f0">Get Started</button>
+        <button style="background:#4A90E2">Get Started</button>
     </div>
 </nav>

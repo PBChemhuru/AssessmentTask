@@ -1,86 +1,84 @@
 <section id="services" style="background-color: #9ac0eb">
-    <div class="container ">
+    <div class="container-fluid">
         <h1>Our Services</h1>
         <p>What we offer to our clients.</p>
-        <div class="container">
-            <div class="row m-1">
-                <div class="col m-1">
-                    <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
-                        <div class="d-flex w-100">
-                            <div class="p-3 d-flex align-items-center justify-content-center"
-                                style="background-color: #E9F2FF ;width:50px; height:50px;border-radius:10px">
-                                <i class="bi bi-activity" style="color: #0c76f0;font-size:24px"></i>
-                            </div>
-                            <div class="m-2">
-                                <h1 style="font-size: 18px; margin-bottom: 5px;">bi-activity</h1>
-                                <p style="margin-bottom: 5px;">list of activities</p>
-                                <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#actModal">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m-1">
-                    <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
-                        <div class="d-flex w-100">
-                            <div class="p-3 d-flex align-items-center justify-content-center"
-                                style="background-color: #E9F2FF; width:50px; height:50px;border-radius:10px">
-                                <i class="bi bi-diagram-3" style="color: #0c76f0;font-size:24px"></i>
-                            </div>
-                            <div class="m-2">
-                                <h1 style="font-size: 18px; margin-bottom: 5px;">bi-organizationchart</h1>
-                                <p style="margin-bottom: 5px;">org charts</p>
-                                <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#orgModal">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row m-1">
-                <div class="col m-1">
-                    <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
-                        <div class="d-flex w-100">
-                            <div class="p-3 d-flex align-items-center justify-content-center"
-                                style="background-color: #E9F2FF; width:50px; height:50px;border-radius:10px">
-                                <i class="bi bi-easel" style="color: #0c76f0;font-size:24px"></i>
-                            </div>
-                            <div class="m-2">
-                                <h1 style="font-size: 18px; margin-bottom: 5px;">bi-easel</h1>
-                                <p style="margin-bottom: 5px;">list of easels</p>
-                                <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#easelModal">
-                                    Read More <i class="bi bi-arrow-right"></i>
-                                </button>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col m-1">
-                    <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
-                        <div class="d-flex w-100">
-                                <div class="p-3 d-flex align-items-center justify-content-center"
-                                    style="background-color: #E9F2FF; width:20%; height:50px;border-radius:10px">
-                                    <i class="bi bi-clipboard-data" style="color: #0c76f0;font-size:24px;"></i>
-                                </div>
-                                <div class="m-2">
-                                    <h1 style="font-size: 18px; margin-bottom: 5px;">bi-dataorganization</h1>
-                                    <p style="margin-bottom: 5px;">datas charts</p>
-                                    <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#dataModal">
-                                        Read More <i class="bi bi-arrow-right"></i>
-                                    </button>
-                                    
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row m-1">
+          <div class="col m-1">
+              <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
+                  <div class="d-flex w-100">
+                      <div class="p-3 d-flex align-items-center justify-content-center"
+                          style="background-color: #E9F2FF ;width:50px; height:50px;border-radius:10px">
+                          <i class="bi bi-activity" style="color: #0c76f0;font-size:24px"></i>
+                      </div>
+                      <div class="m-2">
+                          <h1 style="font-size: 18px; margin-bottom: 5px;">bi-activity</h1>
+                          <p style="margin-bottom: 5px;">list of activities</p>
+                          <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#actModal">
+                              Read More <i class="bi bi-arrow-right"></i>
+                          </button>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col m-1">
+              <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
+                  <div class="d-flex w-100">
+                      <div class="p-3 d-flex align-items-center justify-content-center"
+                          style="background-color: #E9F2FF; width:50px; height:50px;border-radius:10px">
+                          <i class="bi bi-diagram-3" style="color: #0c76f0;font-size:24px"></i>
+                      </div>
+                      <div class="m-2">
+                          <h1 style="font-size: 18px; margin-bottom: 5px;">bi-organizationchart</h1>
+                          <p style="margin-bottom: 5px;">org charts</p>
+                          <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#orgModal">
+                              Read More <i class="bi bi-arrow-right"></i>
+                          </button>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row m-1">
+          <div class="col m-1">
+              <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
+                  <div class="d-flex w-100">
+                      <div class="p-3 d-flex align-items-center justify-content-center"
+                          style="background-color: #E9F2FF; width:50px; height:50px;border-radius:10px">
+                          <i class="bi bi-easel" style="color: #0c76f0;font-size:24px"></i>
+                      </div>
+                      <div class="m-2">
+                          <h1 style="font-size: 18px; margin-bottom: 5px;">bi-easel</h1>
+                          <p style="margin-bottom: 5px;">list of easels</p>
+                          <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#easelModal">
+                              Read More <i class="bi bi-arrow-right"></i>
+                          </button>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col m-1">
+              <div class="card d-flex align-items-center p-3 shadow-sm" style="border-radius: 20px">
+                  <div class="d-flex w-100">
+                          <div class="p-3 d-flex align-items-center justify-content-center"
+                              style="background-color: #E9F2FF; width:20%; height:50px;border-radius:10px">
+                              <i class="bi bi-clipboard-data" style="color: #0c76f0;font-size:24px;"></i>
+                          </div>
+                          <div class="m-2">
+                              <h1 style="font-size: 18px; margin-bottom: 5px;">bi-dataorganization</h1>
+                              <p style="margin-bottom: 5px;">datas charts</p>
+                              <button type="button" class="btn btn-link text-primary p-0" style="font-size: 16px; font-weight: 500; text-decoration: none;" data-bs-toggle="modal" data-bs-target="#dataModal">
+                                  Read More <i class="bi bi-arrow-right"></i>
+                              </button>
+                              
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
-        </div>
         <div class="modal fade" id="actModal" tabindex="-1" aria-labelledby="actModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">

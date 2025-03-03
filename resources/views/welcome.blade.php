@@ -21,6 +21,7 @@
     @include('layouts.sections.features')
     @include('layouts.sections.services')
     @include('layouts.sections.pricing')
+    @include('layouts.sections.testimonials')
     @include('layouts.sections.contactus')
 
     <!-- Bootstrap JS -->

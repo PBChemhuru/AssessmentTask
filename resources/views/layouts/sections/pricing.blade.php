@@ -128,7 +128,7 @@
             </div>
         </div>
     </div>
-    <div class="row my-2 bg-primary rounded w-100">
+    <div class="row my-2 bg-primary  w-100 mx-0" style="height: fit-content">
         <div class="container w-100">
             <p style="color: white;font-size:20px;font-style:italic;">All the things you need to do to success</p>
             <p style="color: white">This is where to take action</p>
