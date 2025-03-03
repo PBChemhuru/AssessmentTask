@@ -15,6 +15,7 @@ class ContentSeeder extends Seeder
     public function run(): void
     {
         $homeSection = Section::where('name', 'home')->first();
+        $aboutUsSection = Section::where('name', 'aboutus')->first();
 
         if ($homeSection) {
             $contents = [
@@ -40,5 +41,45 @@ class ContentSeeder extends Seeder
                 ]);
             }
         }
+
+        if ($aboutUsSection) {
+            $contents = [
+                ['type' => 'text', 'content' => ['title' => 'MORE ABOUT US']],
+                ['type' => 'text', 'content' => ['heading' => 'OUR GOALS OR SOMETHING LIKE THAT']],
+                ['type' => 'text', 'content' => ['subheading' => 'What has inspired us to be the way we are']],
+                ['type' => 'list', 'content' => [
+                    ['text' => 'this'],
+                    ['text' => 'this thing'],
+                    ['text' => 'this other thing'],
+                    ['text' => 'this'],
+                    ['text' => 'this thing'],
+                    ['text' => 'this other thing'],
+                ]],
+                ['type' => 'image', 'content' => ['src' => 'images/istockphoto-1308949444-1024x1024.jpg']],
+                ['type' => 'profile', 'content' => [
+                    'name' => 'Mario Smith',
+                    'role' => 'CEO & Founder',
+                    'image' => 'images/istockphoto-1308949444-1024x1024.jpg'
+                ]],
+                ['type' => 'contact', 'content' => [
+                    'label' => 'Call us anytime',
+                    'phone' => '+123456-789'
+                ]],
+                ['type' => 'image_gallery', 'content' => [
+                    ['src' => 'images/istockphoto-1308949444-1024x1024.jpg', 'style' => 'large'],
+                    ['src' => 'images/istockphoto-1308949444-1024x1024.jpg', 'style' => 'small']
+                ]]
+            ];
+
+            foreach ($contents as $content) {
+                Content::create([
+                    'section_id' => $aboutUsSection->id,
+                    'type' => $content['type'],
+                    'content' => $content['content'],
+                ]);
+            }
+        }
+
+        
     }
 }
