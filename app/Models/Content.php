@@ -10,7 +10,7 @@ class Content extends Model
     use HasFactory;
     protected $fillable =
     [
-        'section_id',
+        'section',
         'type',
         'content',
     ];
@@ -19,8 +19,5 @@ class Content extends Model
         'content'=>'array'
     ];
 
-    public function section()
-    {
-        return $this->belongsTo(Section::class);
-    }
+    
 }

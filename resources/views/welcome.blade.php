@@ -16,13 +16,16 @@
 
     @include('layouts.sections.nav-bar')
     <!-- Sections -->
-    @include('layouts.sections.home')
-    @include('layouts.sections.aboutus')
-    @include('layouts.sections.features')
-    @include('layouts.sections.services')
-    @include('layouts.sections.pricing')
-    @include('layouts.sections.testimonials')
-    @include('layouts.sections.contactus')
+    @include('layouts.sections.home', ['homeContents' => $sections['home'] ?? collect()])
+    @include('layouts.sections.aboutus', ['aboutUsContents' => $sections['aboutus'] ?? collect()])
+    @include('layouts.sections.features', ['featuresContents' => $sections['features'] ?? collect()])
+    @include('layouts.sections.services', ['servicesContents' => $sections['services'] ?? collect()])
+    @include('layouts.sections.pricing', ['pricingContents' => $sections['pricing'] ?? collect()])
+    @include('layouts.sections.testimonials', ['testimonialsContents' => $sections['testimonials'] ?? collect()])
+    @include('layouts.sections.contactus', ['contactContents' => $sections['contact'] ?? collect()])
+
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

@@ -1,76 +1,64 @@
+@php
+    $contactContent = $contentData['contact'] ?? collect();
+    $contactTitle = optional($contactContent->where('type', 'text')->where('content->title', '!=', null)->first())->content['title'] ?? 'CONTACT US';
+    $contactSubtitle = optional($contactContent->where('type', 'text')->where('content->subtitle', '!=', null)->first())->content['subtitle'] ?? 'We would love to hear from you';
+    $contactInfo = $contactContent->where('type', 'contact_info')->first()->content ?? [];
+@endphp
+
 <section id="contact" style="background-color: #9ac0eb">
-    <h1 style="color:white">Contact Us</h1>
-    <p style="color:white">Get in touch with us.</p>
+    <h1 style="color:white">{{ $contactTitle }}</h1>
+    <p style="color:white">{{ $contactSubtitle }}</p>
+
     <div class="container" style="height: 60%">
         <div class="row mb-2 flex-grow-1" style="height: 100%">
             <div class="col rounded-2 bg-primary mx-2 text-center">
                 <h2 style="color:white">Contact info</h2>
                 <p style="color:white">Feel Free to get in touch</p>
-                <div class="row d-flex align-items-center mb-2">
-                    <div class="d-flex  w-100">
-                        <div class="d-flex align-items-center justify-content-center" style="width: 10%">
-                            <i
-                                class="bi bi-geo-alt"style="color: white;background-color:#9ac0eb;border-radius:50%;width:fit-content;height:fit-content;font-size:30px;padding:5px"></i>
-                        </div>
-                        <div class="m-1 " style="text-align: left">
-                            <p style="color: white;margin-bottom:2px;font-weight:bold">Our Location</p>
-                            <p style="color: white;margin-bottom:2px;font-size:12px"> A108 Adam Street</p>
-                            <p style="color: white;margin-bottom:2px;font-size:12px">New York,NY 5255452</p>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row d-flex align-items-center  mb-2">
-                    <div class="d-flex w-100">
-                        <div class="d-flex align items-center justify-content-center" style="width: 10%">
-                            <i class="bi bi-telephone"
-                                style="color: white;background-color:#9ac0eb;border-radius:50%;width:fit-content;height:fit-content;font-size:30px;padding:5px"></i>
-                        </div>
-                        <div class="m-1" style="text-align: left">
-                            <p style="color: white;margin-bottom:2px;font-weight:bold">Phone Number</p>
-                            <p style="color: white;margin-bottom:2px;font-size:12px"> +12548481648</p>
-                            <p style="color: white;margin-bottom:2px;font-size:12px">+3595648184</p>
+                @foreach ($contactInfo as $info)
+                    <div class="row d-flex align-items-center mb-2">
+                        <div class="d-flex w-100">
+                            <div class="d-flex align-items-center justify-content-center" style="width: 10%">
+                                @if (strtolower($info['label']) == 'address')
+                                    <i class="bi bi-geo-alt" style="color: white; background-color:#9ac0eb; border-radius:50%; width:fit-content; height:fit-content; font-size:30px; padding:5px"></i>
+                                @elseif (strtolower($info['label']) == 'phone')
+                                    <i class="bi bi-telephone" style="color: white; background-color:#9ac0eb; border-radius:50%; width:fit-content; height:fit-content; font-size:30px; padding:5px"></i>
+                                @elseif (strtolower($info['label']) == 'email')
+                                    <i class="bi bi-envelope" style="color: white; background-color:#9ac0eb; border-radius:50%; width:fit-content; height:fit-content; font-size:30px; padding:5px"></i>
+                                @endif
+                            </div>
+                            <div class="m-1" style="text-align: left">
+                                <p style="color: white; margin-bottom:2px; font-weight:bold">{{ $info['label'] }}</p>
+                                <p style="color: white; margin-bottom:2px; font-size:12px">{{ $info['value'] }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row d-flex align-items-center  mb-2">
-                    <div class="d-flex w-100">
-                        <div class="d-flex align-items-center justify-content-center" style="width: 10%">
-                            <i class="bi bi-envelope"
-                                style="color: white;background-color:#9ac0eb;border-radius:50%;width:fit-content;height:fit-content;font-size:30px;padding:5px"></i>
-                        </div>
-                        <div class="m-1" style="text-align: left">
-                            <p style="color: white;margin-bottom:2px;font-weight:bold">Email</p>
-                            <p style="color: white;margin-bottom:2px;font-size:12px">info@example.com</p>
-                            <p style="color: white;margin-bottom:2px;font-size:12px">anotherone@info.com</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+
             <div class="col rounded-2 bg-white mx-2">
                 <form style="height: 100%">
                     <h1>Get In Touch</h1>
-                    <p>send us your inquiries and we will get back to you</p>
+                    <p>Send us your inquiries and we will get back to you</p>
                     <div class="row mb-3">
-                        <div  class="col me-2">
+                        <div class="col me-2">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
                         </div>
-                        <div  class="col">
+                        <div class="col">
                             <input type="text" class="form-control" id="email" name="email" placeholder="Your Email">
                         </div>
                     </div>
                     <div class="mb-3">
                         <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                     </div>
-                    <div class="mb-3" style="width: 100%;height:40%">
-                       <textarea id="message" name="message" placeholder="Message" style="width: 100%;height:100%" ></textarea>
+                    <div class="mb-3" style="width: 100%; height:40%">
+                        <textarea id="message" name="message" placeholder="Message" style="width: 100%; height:100%"></textarea>
                     </div>
                     <button class="btn btn-primary rounded-pill text-white">Send Message</button>
                 </form>
             </div>
         </div>
     </div>
-    <footer class="bg-light text-dark pt-4 mt-5">
+	 <footer class="bg-light text-dark pt-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
